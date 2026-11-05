@@ -4,15 +4,15 @@ import Footer from "./footer.jsx"
 export default function AboutUsPage() {
  
   const partners = [
-    { name: 'Matter', logo: './public/img/Matter+Logo.webp' },
-    { name: 'Uncommon', logo: './public/img/Uncommon.webp' },
-    { name: 'Lesedi Community Project', logo: './public/img/Lesedi+Community+Projects.webp' },
-    { name: 'Children Community', logo: './public/img/Children+Community.webp' },
-    { name: 'J17 Foundation', logo: './public/img/j17+foundation+logo.webp' },
-    { name: 'Rotary', logo: './public/img/Rotary+International+Logo.webp' },
-    { name: 'Vimba Zimbabwe', logo: './public/img/Miracle+Missions+Vimba.webp' },
-    { name: 'Jacana Foundation', logo: './public/img/hwange.jpeg' },
-    { name: 'Green Team', logo: './public/img/Africa+Eden.webp' },
+    { name: 'Matter', logo: './img/Matter+Logo.webp' },
+    { name: 'Uncommon', logo: './img/Uncommon.webp' },
+    { name: 'Lesedi Community Project', logo: './img/Lesedi+Community+Projects.webp' },
+    { name: 'Children Community', logo: './img/Children+Community.webp' },
+    { name: 'J17 Foundation', logo: './img/j17+foundation+logo.webp' },
+    { name: 'Rotary', logo: './img/Rotary+International+Logo.webp' },
+    { name: 'Vimba Zimbabwe', logo: './img/Miracle+Missions+Vimba.webp' },
+    { name: 'Jacana Foundation', logo: './img/hwange.jpeg' },
+    { name: 'Green Team', logo: './img/Africa+Eden.webp' },
   ];
 
   return (
@@ -21,7 +21,7 @@ export default function AboutUsPage() {
       
       <div className="w-full h-[60vh] bg-gray-300 relative overflow-hidden">
         <img 
-          src="./public/img/girl.jpeg" 
+          src="./img/girl.jpeg" 
           alt="Jafuta Foundation Hero" 
           className="w-full h-full object-cover"
         />

@@ -3,23 +3,23 @@ import Footer from "./footer.jsx";
 import Form from "./form.jsx";
 
 const TEAM_MEMBERS = [
-  { name: "Gail van Jaarsveldt", role: "FOUNDER & CHIEF EXECUTIVE OFFICER", image: "./public/img/Gail+Image+1.webp" },
-  { name: "Minenhle Moyo", role: "CHIEF OPERATIONS OFFICER", image: "./public/img/Minenhle+Moyo.webp" },
-  { name: "Sipho Moyo", role: "OUTREACH DIRECTOR", image: "./public/img/Sipho+Moyo+1.webp" },
-  { name: "Courtney Connolly", role: "EDUCATION DIRECTOR & BOARD SECRETARY", image: "./public/img/Courtney+Connelly.webp" },
-  { name: "Jacqueline Gurajena", role: "HUMAN CAPITAL & WOMEN EMPOWERMENT PROGRAMS DIRECTOR", image: "./public/img/Sipho+Moyo.webp" },
-  { name: "Tsitsi Mposiwa", role: "COUNSELLOR & GENDER CHAMPION", image: "./public/img/Tsitsi+Mposiwa.webp" }
+  { name: "Gail van Jaarsveldt", role: "FOUNDER & CHIEF EXECUTIVE OFFICER", image: "./img/Gail+Image+1.webp" },
+  { name: "Minenhle Moyo", role: "CHIEF OPERATIONS OFFICER", image: "./img/Minenhle+Moyo.webp" },
+  { name: "Sipho Moyo", role: "OUTREACH DIRECTOR", image: "./img/Sipho+Moyo+1.webp" },
+  { name: "Courtney Connolly", role: "EDUCATION DIRECTOR & BOARD SECRETARY", image: "./img/Courtney+Connelly.webp" },
+  { name: "Jacqueline Gurajena", role: "HUMAN CAPITAL & WOMEN EMPOWERMENT PROGRAMS DIRECTOR", image: "./img/Sipho+Moyo.webp" },
+  { name: "Tsitsi Mposiwa", role: "COUNSELLOR & GENDER CHAMPION", image: "./img/Tsitsi+Mposiwa.webp" }
 ];
 
 const TRUSTEES = [
-  { name: "Benoit Fayd'herbe", image: "./public/img/Benoit+Fayd'herbe (1).webp" },
-  { name: "Malcolm Ainscough", image: "./public/img/Malcolm+Ainscough.webp" },
+  { name: "Benoit Fayd'herbe", image: "./img/Benoit+Fayd'herbe (1).webp" },
+  { name: "Malcolm Ainscough", image: "./img/Malcolm+Ainscough.webp" },
   { name: "Kathy Cole (USA)", image: "https://placeholder.com" },
-  { name: "Joshua Magaba", image: "./public/img/Joshua+Magaba (1).webp" },
-  { name: "Gail van Jaarsveldt", image: "./public/img/Gail+Image+1.webp" },
-  { name: "Nyasha Mupita", image: "./public/img/Nyasha+Mupita.webp" },
-  { name: "Courtney Connolly", image: "./public/img/Courtney+Connelly.webp" },
-  { name: "Sara Gardiner", image: "./public/img/Sara+Gardiner.webp" }
+  { name: "Joshua Magaba", image: "./img/Joshua+Magaba (1).webp" },
+  { name: "Gail van Jaarsveldt", image: "./img/Gail+Image+1.webp" },
+  { name: "Nyasha Mupita", image: "./img/Nyasha+Mupita.webp" },
+  { name: "Courtney Connolly", image: "./img/Courtney+Connelly.webp" },
+  { name: "Sara Gardiner", image: "./img/Sara+Gardiner.webp" }
 ];
 
 export default function OurTeamPage() {

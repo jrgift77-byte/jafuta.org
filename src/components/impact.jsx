@@ -6,7 +6,7 @@ const Impact = () => {
       <div className="w-full  font-sans antialiased overflow-x-hidden">
 
      <section className="relative h-screen w-full overflow-hidden">
-  <img src="./public/img/hero.png" alt="Hero" className="absolute inset-0 w-full h-full object-cover" />
+  <img src="./img/hero.png" alt="Hero" className="absolute inset-0 w-full h-full object-cover" />
   <div className="absolute inset-0 bg-black/30" />
   
   
@@ -37,7 +37,7 @@ const Impact = () => {
 
           
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-6"><img src="./public/img/women-nonprofit-skills.webp" alt="Women & Youth" className="w-full h-105 lg:h-150 object-cover" /></div>
+            <div className="lg:col-span-6"><img src="./img/women-nonprofit-skills.webp" alt="Women & Youth" className="w-full h-105 lg:h-150 object-cover" /></div>
             <div className="lg:col-span-5 lg:col-start-8">
               <h3 className="text-[32px] lg:text-[42px] leading-[1.1] font-medium text-white">Women & Youth<br/>Empowerment</h3>
               <p className="mt-6 text-[16px] lg:text-[17px] leading-[1.8] text-[#E8DDD5]/90 font-light">Through deepened impact in gender empowerment, girls' dignity, education, scholarships, and vocational skills training, Jafuta Foundation creates pathways for women and young people to build confidence, and develop meaningful livelihoods.</p>
@@ -52,12 +52,12 @@ const Impact = () => {
               <p className="mt-6 text-[16px] lg:text-[17px] leading-[1.8] text-[#E8DDD5]/90 font-light">We strengthen rural education through supplementary and informal learning, teacher development & training, learning resources, scholarships, and access to technology—bridging the digital divide and expanding education opportunities for rural children and youth.</p>
               <button className="mt-8 bg-[#3D7C7D] px-8 py-3 text-[13px] uppercase text-white">Learn More</button>
             </div>
-            <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2"><img src="./public/img/women-nonprofit-skills.webp" alt="Education" className="w-full h-105 lg:h-150 object-cover" /></div>
+            <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2"><img src="./img/women-nonprofit-skills.webp" alt="Education" className="w-full h-105 lg:h-150 object-cover" /></div>
           </div>
 
           
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-6"><img src="./public/img/women-nonprofit-skills.webp" alt="WASH" className="w-full h-105 lg:h-150 object-cover" /></div>
+            <div className="lg:col-span-6"><img src="./img/women-nonprofit-skills.webp" alt="WASH" className="w-full h-105 lg:h-150 object-cover" /></div>
             <div className="lg:col-span-5 lg:col-start-8">
               <h3 className="text-[32px] lg:text-[42px] leading-[1.1] font-medium text-white">Water, Sanitation (WASH)<br/>& Health</h3>
               <p className="mt-6 text-[16px] lg:text-[17px] leading-[1.8] text-[#E8DDD5]/90 font-light">Improving health and livelihoods by expanding access to solar-powered boreholes/wells, clean and accessible water points, safe sanitation, hygiene education, mobile health clinics, and mental health education and counselling within rural communities.</p>
@@ -71,12 +71,12 @@ const Impact = () => {
               <p className="mt-6 text-[16px] lg:text-[17px] leading-[1.8] text-[#E8DDD5]/90 font-light">Our Livelihoods & Food Security Programme supports communities through nutritional community gardens, climate-smart agriculture, and the growing and distribution of food-bearing and indigenous trees.</p>
               <button className="mt-8 bg-[#3D7C7D] px-8 py-3 text-[13px] uppercase text-white">Learn More</button>
             </div>
-            <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2"><img src="./public/img/women-nonprofit-skills.webp" alt="Livelihoods" className="w-full h-105 lg:h-150 object-cover" /></div>
+            <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2"><img src="./img/women-nonprofit-skills.webp" alt="Livelihoods" className="w-full h-105 lg:h-150 object-cover" /></div>
           </div>
 
           
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-6"><img src="./public/img/women-nonprofit-skills.webp" alt="Conservation" className="w-full h-105 lg:h-150 object-cover" /></div>
+            <div className="lg:col-span-6"><img src="./img/women-nonprofit-skills.webp" alt="Conservation" className="w-full h-105 lg:h-150 object-cover" /></div>
             <div className="lg:col-span-5 lg:col-start-8">
               <h3 className="text-[32px] lg:text-[42px] leading-[1.1] font-medium text-white">Conservation &<br/>Community<br/>Co-Existence</h3>
               <p className="mt-6 text-[16px] lg:text-[17px] leading-[1.8] text-[#E8DDD5]/90 font-light">We protect wildlife while supporting the communities that live alongside it. Through education, conflict-mitigation, habitat restoration, and conservation-linked livelihoods, we can help people and wildlife to better coexist safely and sustainably.</p>
@@ -91,7 +91,7 @@ const Impact = () => {
               <p className="mt-6 text-[16px] lg:text-[17px] leading-[1.8] text-[#E8DDD5]/90 font-light">From deep cultural roots to contemporary creative talent, we celebrate Zimbabwe's identity through artistic and visual expression.</p>
               <button className="mt-8 bg-[#3D7C7D] px-8 py-3 text-[13px] uppercase text-white">Learn More</button>
             </div>
-            <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2"><img src="./public/img/women-nonprofit-skills.webp" alt="Creativity" className="w-full h-105 lg:h-150 object-cover" /></div>
+            <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2"><img src="./img/women-nonprofit-skills.webp" alt="Creativity" className="w-full h-105 lg:h-150 object-cover" /></div>
           </div>
 
         </div>

@@ -4,7 +4,7 @@ const contact = () => {
   return (
     <div>
        <section className="relative w-full">
-        <img src="./public/img/Batoka-creatives-beads.webp" alt="Contact" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="./img/Batoka-creatives-beads.webp" alt="Contact" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50" />
         
        

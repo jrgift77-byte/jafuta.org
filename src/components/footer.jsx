@@ -21,7 +21,7 @@ const footer = () => {
             </div>
 
             <p className="mt-8">Email: gcvj@jafuta.org</p>
-            <img src="./public/img/jafuta-candid-logo.webp" alt="Candid" className="mt-10 w-50 bg-white" />
+            <img src="./img/jafuta-candid-logo.webp" alt="Candid" className="mt-10 w-50 bg-white" />
           </div>
 
           <div className="lg:col-span-6 lg:col-start-7 grid grid-cols-2 gap-8">

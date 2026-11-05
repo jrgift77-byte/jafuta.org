@@ -10,7 +10,7 @@ const ARTICLES = [
       "It's hard to believe we are already in April – the year is flying by! And what a start it has been. We hit the ground running in January (and we haven't stopped yet) as the new school year began.",
       "There is something incredibly special about this time of year. Watching our scholarship students – both new and returning – receive their uniforms and school supplies is always a deeply moving moment."
     ],
-    image: './public/img/Children-africa-school-JafutaFoundation.webp',
+    image: './img/Children-africa-school-JafutaFoundation.webp',
     alt: 'Children in classroom using tablets',
   },
   {
@@ -20,7 +20,7 @@ const ARTICLES = [
     excerpts: [
       "The 2025 financial year was marked by consolidation, measurable impact, and strengthened institutional maturity for Jafuta Foundation. Operating in complex rural communities in the Chidobe and Matedsi Wards of Matabeleland North, the Foundation continued to deliver high-impact, community-driven programs aligned with its mission."
     ],
-    image: './public/img/Batoka-creatives-beads.webp',
+    image: './img/Batoka-creatives-beads.webp',
     alt: '2025 Annual Report Cover booklet',
   },
   {
@@ -30,7 +30,7 @@ const ARTICLES = [
     excerpts: [
       "As we close 2025, we do so with full hearts and deep gratitude. This has been a year of remarkable progress on the ground – made possible by the belief, generosity, and encouragement of our supporters, partners, and friends."
     ],
-    image: './public/img/boy_boxer_africa.webp',
+    image: './img/boy_boxer_africa.webp',
     alt: 'Smiling child with sports gear',
   },
   {
@@ -40,7 +40,7 @@ const ARTICLES = [
     excerpts: [
       "As we cross into the second half of the year, it's incredible to reflect on how much has already happened – and how busy our team on the ground has been!"
     ],
-    image: './public/img/Batoka-creatives-beads.webp',
+    image: './img/Batoka-creatives-beads.webp',
     alt: 'Hand processing grain crops close up',
   }
 ];
