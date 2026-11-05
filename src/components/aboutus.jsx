@@ -63,14 +63,14 @@ export default function AboutUsPage() {
               </div>
               
               <div className="h-72 bg-gray-400 rounded-md overflow-hidden shadow-sm">
-                <img src="./public/img/women-africa-hero-image.webp" alt="Community Members" className="w-full h-full object-cover" />
+                <img src="./img/women-africa-hero-image.webp" alt="Community Members" className="w-full h-full object-cover" />
               </div>
             </div>
 
            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="h-72 bg-gray-400 rounded-md overflow-hidden shadow-sm order-last md:order-first">
-                <img src="./public/img/Girls_sports_africa.webp" alt="Village Infrastructure" className="w-full h-full object-cover" />
+                <img src="./img/Girls_sports_africa.webp" alt="Village Infrastructure" className="w-full h-full object-cover" />
               </div>
             
               <div className="space-y-4">
@@ -100,13 +100,13 @@ export default function AboutUsPage() {
        
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mt-12">
           <div className="h-80 bg-gray-400 rounded-md overflow-hidden shadow-md">
-            <img src="./public/img/boy.jpeg" alt="Impact Presentation" className="w-full h-full object-cover" />
+            <img src="./img/boy.jpeg" alt="Impact Presentation" className="w-full h-full object-cover" />
           </div>
           <div className="h-80 bg-gray-400 rounded-md overflow-hidden shadow-md">
-            <img src="./public/img/girl-school-africa.webp" alt="Tech Center Learning" className="w-full h-full object-cover" />
+            <img src="./img/girl-school-africa.webp" alt="Tech Center Learning" className="w-full h-full object-cover" />
           </div>
            <div className="h-80 bg-gray-400 rounded-md overflow-hidden shadow-md">
-            <img src="./public/img/woman-sewing-africa.webp" alt="Tech Center Learning" className="w-full h-full object-cover" />
+            <img src="./img/woman-sewing-africa.webp" alt="Tech Center Learning" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
