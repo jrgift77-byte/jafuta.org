@@ -1,99 +1,130 @@
-import { useState } from 'react';
-import Footer from "./footer.jsx";
-import ValueCard from "./valuecard.jsx";
-import Form from "./form.jsx";
+import Footer from "./footer";
+import ValueCard from "./valuecard";
+import Form from "./form";
+
+const coreValues = [
+  {
+    title: "Integrity",
+    description:
+      "We act with transparency, accountability, and responsibility in stewarding every resource entrusted to us.",
+  },
+  {
+    title: "Innovation",
+    description:
+      "We embrace creativity, technology, and new ideas that drive sustainable change.",
+  },
+  {
+    title: "Respect",
+    description:
+      "We honour people, culture, and the environment, working in harmony with communities and traditional leadership.",
+  },
+  {
+    title: "Collaboration",
+    description:
+      "We believe in meaningful partnerships with communities, donors, government, and the environment itself.",
+  },
+  {
+    title: "Empowerment",
+    description:
+      "We build capacity, confidence, and opportunity — never dependency.",
+  },
+  {
+    title: "Sustainability",
+    description:
+      "We focus on long-term, replicable impact that benefits both people and nature.",
+  },
+  {
+    title: "Compassion",
+    description:
+      "We lead with empathy, humility, and a deep respect for human dignity.",
+  },
+];
 
 const Vision = () => {
-  const [email, setEmail] = useState("");
-
-  const coreValues = [
-    { title: "Integrity", description: "We act with transparency, accountability, and responsibility in stewarding every resource entrusted to us." },
-    { title: "Innovation", description: "We embrace creativity, technology, and new ideas that drive sustainable change." },
-    { title: "Respect", description: "We honour people, culture, and the environment, working in harmony with communities and traditional leadership." },
-    { title: "Collaboration", description: "We believe in meaningful partnerships with communities, donors, government, and the environment itself." },
-    { title: "Empowerment", description: "We build capacity, confidence, and opportunity — never dependency." },
-    { title: "Sustainability", description: "We focus on long-term, replicable impact that benefits both people and nature." },
-    { title: "Compassion", description: "We lead with empathy, humility, and a deep respect for human dignity." }
-  ];
-
   return (
-    <div className="w-full">
+    <div className="w-full min-h-screen flex flex-col bg-white text-[#2B2B2B] font-sans antialiased">
+      <main className="grow">
+        <section className="w-full bg-white py-16 sm:py-20 lg:py-28">
+          <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+            <div className="lg:col-span-6 flex flex-col justify-between gap-10">
+              <div>
+                <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#3D7C7D] mb-4">
+                  Purpose &amp; Direction
+                </span>
+                <h1 className="text-3xl sm:text-4xl lg:text-[48px] font-serif font-bold leading-[1.15] text-[#2B2B2B] tracking-tight">
+                  &ldquo;Everyone deserves to thrive with dignity and
+                  hope.&rdquo;
+                </h1>
+              </div>
 
-    <section className="w-full bg-white py-16 lg:py-24">
- 
-  <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-    
-    
-    <div className="flex flex-col gap-12">
-      
-      
-      <div>
-        <h1 className="text-[34px] lg:text-[48px] font-bold leading-[1.15] text-black tracking-tight">
-          "Everyone deserves to thrive with dignity and hope."
-        </h1>
-      </div>
+              <div className="space-y-10">
+                <div className="border-l-2 border-[#3D7C7D] pl-5 sm:pl-6">
+                  <h2 className="text-2xl sm:text-[28px] font-serif font-bold text-[#2B2B2B] mb-3">
+                    Our Vision
+                  </h2>
+                  <p className="text-base lg:text-[17px] leading-[1.8] text-[#5A5A5A] font-light">
+                    To foster self-sustaining community development in the
+                    Hwange District (Dibutibu, Sizinda, Chisuma, Monde and
+                    Matetsi) through education, empowerment, and livelihood
+                    opportunities that build resilience and improve quality of
+                    life.
+                  </p>
+                </div>
 
-      
-      <div>
-        <h2 className="text-[28px] font-bold text-black mb-4">Our Vision</h2>
-        <p className="text-[16px] lg:text-[17px] leading-8 text-[#555555] font-light">
-          To foster self-sustaining community development in the Hwange District
-          (Dibutibu, Sizinda, Chisuma, Monde and Matetsi) through education,
-          empowerment, and livelihood opportunities that build resilience and
-          improve quality of life.
-        </p>
-      </div>
-      
-      
-      <div>
-        <h2 className="text-[28px] font-bold text-black mb-4">Our Mission</h2>
-        <p className="text-[16px] lg:text-[17px] leading-8 text-[#555555] font-light">
-          Jafuta Foundation is dedicated to empowering rural communities by providing
-          increased access to essential resources and services, championing conservation,
-          advancing gender equality, fostering resilience, and promoting self-sufficiency.
-          Through collaborative efforts, we work to create sustainable environments that
-          uplift lives and safeguard our shared future.
-        </p>
-      </div>
+                <div className="border-l-2 border-[#3D7C7D] pl-5 sm:pl-6">
+                  <h2 className="text-2xl sm:text-[28px] font-serif font-bold text-[#2B2B2B] mb-3">
+                    Our Mission
+                  </h2>
+                  <p className="text-base lg:text-[17px] leading-[1.8] text-[#5A5A5A] font-light">
+                    Jafuta Foundation is dedicated to empowering rural
+                    communities by providing increased access to essential
+                    resources and services, championing conservation, advancing
+                    gender equality, fostering resilience, and promoting
+                    self-sufficiency. Through collaborative efforts, we work to
+                    create sustainable environments that uplift lives and
+                    safeguard our shared future.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-    </div>
-
-
-    <div className="w-full h-full min-h-100 lg:min-h-150"> 
-      <img
-        src="/img/jr.webp"
-        alt="Jafuta women"
-        className="w-full h-full object-cover rounded-sm"
-      />
-    </div>
-
-  </div>
-</section>
-
-
-      
-      <section className="bg-[#e9ddd0] w-full py-12 lg:py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <h2 className="text-[30px] font-bold mb-10 text-[#2e2a26]">Our Core Values</h2>
-
-         
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {coreValues.map((value, index) => (
-              <ValueCard 
-                key={index} 
-                title={value.title} 
-                description={value.description} 
-              />
-            ))}
+            <div className="lg:col-span-6">
+              <div className="w-full h-full min-h-95 sm:min-h-120 lg:min-h-150 overflow-hidden rounded-sm shadow-sm bg-stone-100">
+                <img
+                  src="/img/jr.webp"
+                  alt="Women supported by Jafuta Foundation programmes"
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-     
-     
+        <section className="bg-[#EFECE6] w-full py-16 sm:py-20 lg:py-28">
+          <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+            <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[#3D7C7D] mb-3">
+                What Guides Us
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#2B2B2B] tracking-tight">
+                Our Core Values
+              </h2>
+            </div>
 
-      
-      <Form email={email} setEmail={setEmail} />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {coreValues.map((value) => (
+                <ValueCard
+                  key={value.title}
+                  title={value.title}
+                  description={value.description}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <Form />
+      </main>
       <Footer />
     </div>
   );
