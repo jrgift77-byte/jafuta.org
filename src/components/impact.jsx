@@ -52,36 +52,36 @@ const programmes = [
 const Impact = () => {
   return (
     <div className="w-full font-sans antialiased overflow-x-hidden">
-      <section className="relative min-h-[85vh] lg:h-screen w-full overflow-hidden flex items-end">
+      <section className="relative min-h-[65vh] sm:min-h-[75vh] md:min-h-[85vh] lg:h-screen w-full overflow-hidden flex items-end">
         <img
           src="/img/hero.png"
           alt="Jafuta Foundation community impact"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/35 to-black/25" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/35 to-black/25" />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pb-16 sm:pb-24 lg:pb-28">
-          <h1 className="text-3xl sm:text-5xl lg:text-[60px] font-semibold leading-[1.15] text-white tracking-tight max-w-3xl">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 md:px-12 lg:px-16 pb-12 sm:pb-20 md:pb-24 lg:pb-28">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[60px] font-semibold leading-[1.15] text-white tracking-tight max-w-3xl">
             Empowering Rural Communities Through Action.
           </h1>
         </div>
       </section>
 
-      <section className="bg-white px-6 sm:px-10 lg:px-16 py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          <div className="lg:col-span-6 flex flex-col items-start">
-            <h2 className="text-3xl sm:text-4xl lg:text-[52px] leading-[1.1] font-medium text-[#2B2B2B] tracking-tight">
+      <section className="bg-white px-5 sm:px-8 md:px-12 lg:px-16 py-14 sm:py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-start">
+          <div className="md:col-span-6 flex flex-col items-start">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[52px] leading-[1.12] font-medium text-[#2B2B2B] tracking-tight">
               Supporting education and community.
             </h2>
             <a
               href="/our-vision"
-              className="mt-8 lg:mt-10 inline-block bg-[#3D7C7D] hover:bg-[#316667] transition-colors px-9 py-4 text-xs sm:text-[13px] font-medium tracking-[0.2em] uppercase text-white"
+              className="mt-6 sm:mt-8 lg:mt-10 inline-block bg-[#3D7C7D] hover:bg-[#316667] transition-colors px-7 sm:px-9 py-3.5 sm:py-4 text-xs sm:text-[13px] font-medium tracking-[0.2em] uppercase text-white"
             >
               Our Vision
             </a>
           </div>
 
-          <div className="lg:col-span-6 space-y-6 text-base sm:text-lg lg:text-[19px] leading-[1.8] text-[#5A5A5A] font-light">
+          <div className="md:col-span-6 space-y-5 sm:space-y-6 text-sm sm:text-base md:text-lg lg:text-[19px] leading-[1.8] text-[#5A5A5A] font-light">
             <p>
               We provide rural families with access to quality education,
               digital technology, clean water, nutritional gardens, equal
@@ -97,44 +97,44 @@ const Impact = () => {
         </div>
       </section>
 
-      <section className="bg-[#4A3E36] px-6 sm:px-10 lg:px-16 py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto flex flex-col gap-20 lg:gap-28">
+      <section className="bg-[#4A3E36] px-5 sm:px-8 md:px-12 lg:px-16 py-14 sm:py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto flex flex-col gap-14 sm:gap-20 lg:gap-28">
           {programmes.map((item, index) => {
             const isEven = index % 2 === 1;
 
             return (
               <div
                 key={item.title}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
+                className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center"
               >
                 <div
-                  className={`lg:col-span-6 ${
-                    isEven ? "order-1 lg:order-2 lg:col-start-7" : ""
+                  className={`md:col-span-6 ${
+                    isEven ? "order-1 md:order-2 md:col-start-7" : ""
                   }`}
                 >
                   <div className="overflow-hidden rounded-xs shadow-md">
                     <img
                       src={item.image}
                       alt={item.alt}
-                      className="w-full h-72 sm:h-96 lg:h-130 object-cover hover:scale-[1.02] transition-transform duration-500"
+                      className="w-full h-64 sm:h-80 md:h-96 lg:h-125 object-cover hover:scale-[1.02] transition-transform duration-500"
                     />
                   </div>
                 </div>
 
                 <div
-                  className={`lg:col-span-5 ${
-                    isEven ? "order-2 lg:order-1" : "lg:col-start-8"
+                  className={`md:col-span-6 lg:col-span-5 ${
+                    isEven ? "order-2 md:order-1" : "lg:col-start-8"
                   }`}
                 >
-                  <h3 className="text-2xl sm:text-3xl lg:text-[40px] leading-[1.15] font-medium text-white">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] leading-[1.15] font-medium text-white">
                     {item.title}
                   </h3>
-                  <p className="mt-5 text-base lg:text-[17px] leading-[1.8] text-[#E8DDD5]/90 font-light">
+                  <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-[17px] leading-[1.75] sm:leading-[1.8] text-[#E8DDD5]/90 font-light">
                     {item.description}
                   </p>
                   <a
                     href={item.href}
-                    className="mt-8 inline-block bg-[#3D7C7D] hover:bg-[#316667] transition-colors px-8 py-3.5 text-xs sm:text-[13px] font-medium tracking-[0.15em] uppercase text-white"
+                    className="mt-6 sm:mt-8 inline-block bg-[#3D7C7D] hover:bg-[#316667] transition-colors px-7 sm:px-8 py-3 sm:py-3.5 text-xs sm:text-[13px] font-medium tracking-[0.15em] uppercase text-white"
                   >
                     Learn More
                   </a>

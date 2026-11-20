@@ -57,7 +57,7 @@ function NavigationContent({ location }) {
   const hoverColor = "hover:text-[#3D7C7D]";
 
   const getLinkClassName = ({ isActive }) =>
-    `text-base lg:text-[17px] font-medium transition-colors py-1 border-b-2 ${
+    `text-sm xl:text-[17px] font-medium whitespace-nowrap transition-colors py-1 border-b-2 ${
       isActive
         ? "text-[#3D7C7D] border-[#3D7C7D]"
         : `${navTextColor} ${hoverColor} border-transparent`
@@ -74,18 +74,18 @@ function NavigationContent({ location }) {
       >
         <nav
           aria-label="Primary Navigation"
-          className="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between"
+          className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 h-20 sm:h-24 flex items-center justify-between gap-4"
         >
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <img
               src="/img/logo.png"
               alt="Jafuta Foundation"
-              className="h-16 w-16 lg:h-20 lg:w-20 p-1.5 rounded-full object-contain"
+              className="h-14 w-14 sm:h-16 sm:w-16 lg:h-20 lg:w-20 p-1 sm:p-1.5 rounded-full object-contain"
             />
           </Link>
 
-          <div className="hidden lg:flex items-center gap-8">
-            <div className="flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-5 xl:gap-8">
+            <div className="flex items-center gap-4 xl:gap-6">
               <NavLink to="/" end className={getLinkClassName}>
                 Home
               </NavLink>
@@ -102,7 +102,7 @@ function NavigationContent({ location }) {
                 <NavLink
                   to="/projects"
                   className={({ isActive }) =>
-                    `inline-flex items-center gap-1.5 text-base lg:text-[17px] font-medium transition-colors py-1 border-b-2 ${
+                    `inline-flex items-center gap-1.5 text-sm xl:text-[17px] font-medium whitespace-nowrap transition-colors py-1 border-b-2 ${
                       isActive || location.pathname.startsWith("/projects")
                         ? "text-[#3D7C7D] border-[#3D7C7D]"
                         : `${navTextColor} ${hoverColor} border-transparent`
@@ -128,12 +128,12 @@ function NavigationContent({ location }) {
                 </NavLink>
 
                 {isDropdownOpen && (
-                  <div className="absolute left-0 top-full w-80 bg-white shadow-xl rounded-sm py-2 flex flex-col z-50 border border-stone-100">
+                  <div className="absolute left-0 top-full w-72 xl:w-80 bg-white shadow-xl rounded-sm py-2 flex flex-col z-50 border border-stone-100">
                     {projectItems.map((item) => (
                       <Link
                         key={item.name}
                         to={item.path}
-                        className="px-5 py-3 text-[15px] text-[#2B2B2B] hover:bg-stone-50 hover:text-[#3D7C7D] transition-colors font-normal border-b border-stone-100 last:border-0 leading-snug"
+                        className="px-5 py-3 text-sm xl:text-[15px] text-[#2B2B2B] hover:bg-stone-50 hover:text-[#3D7C7D] transition-colors font-normal border-b border-stone-100 last:border-0 leading-snug"
                       >
                         {item.name}
                       </Link>
@@ -153,7 +153,7 @@ function NavigationContent({ location }) {
               ))}
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3 xl:gap-4">
               <a
                 href="https://facebook.com"
                 target="_blank"
@@ -176,7 +176,7 @@ function NavigationContent({ location }) {
 
             <Link
               to="/donate"
-              className="bg-[#3D7C7D] hover:bg-[#316667] px-6 py-2.5 text-sm font-semibold uppercase tracking-wider text-white rounded-sm transition-colors shadow-xs"
+              className="bg-[#3D7C7D] hover:bg-[#316667] px-5 xl:px-6 py-2.5 text-xs xl:text-sm font-semibold uppercase tracking-wider text-white rounded-sm transition-colors shadow-xs whitespace-nowrap"
             >
               Donate
             </Link>
@@ -187,10 +187,10 @@ function NavigationContent({ location }) {
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             aria-expanded={isMobileMenuOpen}
             aria-label="Toggle navigation menu"
-            className={`lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-sm border transition-colors cursor-pointer ${
-              isHomePage
+            className={`lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-sm border transition-colors cursor-pointer shrink-0 ${
+              isHomePage && !isMobileMenuOpen
                 ? "border-white/40 text-white hover:bg-white/10"
-                : "border-stone-300 text-[#2B2B2B] hover:border-[#3D7C7D] hover:text-[#3D7C7D]"
+                : "border-stone-300 text-[#2B2B2B] hover:border-[#3D7C7D] hover:text-[#3D7C7D] bg-white/90"
             }`}
           >
             {isMobileMenuOpen ? (
@@ -226,30 +226,50 @@ function NavigationContent({ location }) {
         </nav>
 
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-stone-200 px-6 py-5 shadow-xl space-y-2">
-            <Link
+          <div className="lg:hidden bg-white border-t border-stone-200 px-4 sm:px-6 md:px-8 py-5 shadow-xl space-y-2 max-h-[calc(100vh-5rem)] overflow-y-auto">
+            <NavLink
               to="/"
-              className="block py-2.5 text-base font-medium text-[#2B2B2B] hover:text-[#3D7C7D]"
+              end
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={({ isActive }) =>
+                `block py-2.5 px-3 rounded-sm text-base font-medium transition-colors ${
+                  isActive
+                    ? "bg-[#3D7C7D]/10 text-[#3D7C7D] font-semibold"
+                    : "text-[#2B2B2B] hover:bg-stone-50"
+                }`
+              }
             >
               Home
-            </Link>
+            </NavLink>
 
-            <Link
+            <NavLink
               to="/our-vision"
-              className="block py-2.5 text-base font-medium text-[#2B2B2B] hover:text-[#3D7C7D]"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={({ isActive }) =>
+                `block py-2.5 px-3 rounded-sm text-base font-medium transition-colors ${
+                  isActive
+                    ? "bg-[#3D7C7D]/10 text-[#3D7C7D] font-semibold"
+                    : "text-[#2B2B2B] hover:bg-stone-50"
+                }`
+              }
             >
               Our Vision
-            </Link>
+            </NavLink>
 
-            <div>
+            <div className="rounded-sm">
               <button
                 type="button"
                 onClick={() => setIsMobileProjectsOpen((prev) => !prev)}
-                className="w-full flex items-center justify-between py-2.5 text-base font-medium text-[#2B2B2B] hover:text-[#3D7C7D] cursor-pointer"
+                aria-expanded={isMobileProjectsOpen}
+                className={`w-full flex items-center justify-between py-2.5 px-3 rounded-sm text-base font-medium transition-colors cursor-pointer ${
+                  location.pathname.startsWith("/projects")
+                    ? "text-[#3D7C7D] font-semibold"
+                    : "text-[#2B2B2B] hover:bg-stone-50"
+                }`}
               >
                 <span>Projects</span>
                 <svg
-                  className={`w-4 h-4 transition-transform ${
+                  className={`w-4 h-4 transition-transform duration-200 ${
                     isMobileProjectsOpen ? "rotate-180" : ""
                   }`}
                   fill="none"
@@ -266,12 +286,13 @@ function NavigationContent({ location }) {
               </button>
 
               {isMobileProjectsOpen && (
-                <div className="pl-4 border-l-2 border-[#3D7C7D]/30 space-y-1.5 my-1">
+                <div className="pl-4">
                   {projectItems.map((item) => (
                     <Link
                       key={item.name}
                       to={item.path}
-                      className="block py-1.5 text-sm text-stone-600 hover:text-[#3D7C7D]"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="block py-2.5 px-3 text-sm text-[#2B2B2B] hover:text-[#3D7C7D]"
                     >
                       {item.name}
                     </Link>
@@ -281,25 +302,40 @@ function NavigationContent({ location }) {
             </div>
 
             {mainNavLinks.slice(1).map((link) => (
-              <Link
+              <NavLink
                 key={link.path}
                 to={link.path}
-                className="block py-2.5 text-base font-medium text-[#2B2B2B] hover:text-[#3D7C7D]"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={({ isActive }) =>
+                  `block py-2.5 px-3 rounded-sm text-base font-medium transition-colors ${
+                    isActive
+                      ? "bg-[#3D7C7D]/10 text-[#3D7C7D] font-semibold"
+                      : "text-[#2B2B2B] hover:bg-stone-50"
+                  }`
+                }
               >
                 {link.name}
-              </Link>
+              </NavLink>
             ))}
 
             <Link
               to="/donate"
-              className="block mt-2 text-center bg-[#3D7C7D] hover:bg-[#316667] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-white rounded-sm transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block mt-3 bg-[#3D7C7D] hover:bg-[#316667] px-4 py-3 text-center text-sm font-semibold uppercase tracking-wider text-white rounded-sm transition-colors"
             >
               Donate
             </Link>
           </div>
         )}
       </header>
+    </>
+  );
+}
 
+export default function App() {
+  return (
+    <BrowserRouter>
+      <NavigationWrapper />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -309,14 +345,6 @@ function NavigationContent({ location }) {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/newsletter" element={<Newsletter />} />
       </Routes>
-    </>
-  );
-}
-
-export default function App() {
-  return (
-    <BrowserRouter>
-      <NavigationWrapper />
     </BrowserRouter>
   );
 }

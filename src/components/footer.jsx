@@ -1,4 +1,4 @@
-import  "react";
+import "react";
 
 const aboutLinks = [
   { label: "Our Vision", href: "/our-vision" },
@@ -20,40 +20,42 @@ const projectLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#4F4138] text-white px-6 sm:px-10 lg:px-24 pt-16 pb-10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+    <footer className="bg-[#4F4138] text-white px-5 sm:px-8 md:px-14 lg:px-24 pt-12 sm:pt-16 pb-8 sm:pb-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 sm:gap-12 lg:gap-8">
       
-        <div className="lg:col-span-5 font-light text-sm sm:text-base leading-relaxed space-y-8">
-          <div>
-            <p className="font-semibold text-white tracking-wide">
-              Jafuta Foundation
-            </p>
-            <address className="not-italic text-white/85 mt-1">
-              Elephant&apos;s Walk,
-              <br />
-              273 Adam Stander Road,
-              <br />
-              Victoria Falls, Zimbabwe
-            </address>
-            <p className="font-medium text-white mt-2">
-              PVO Registration No: 201/26
-            </p>
+        <div className="md:col-span-5 font-light text-sm sm:text-base leading-relaxed space-y-6 sm:space-y-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-6 sm:gap-8">
+            <div>
+              <p className="font-semibold text-white tracking-wide">
+                Jafuta Foundation
+              </p>
+              <address className="not-italic text-white/85 mt-1">
+                Elephant&apos;s Walk,
+                <br />
+                273 Adam Stander Road,
+                <br />
+                Victoria Falls, Zimbabwe
+              </address>
+              <p className="font-medium text-white mt-2">
+                PVO Registration No: 201/26
+              </p>
+            </div>
+
+            <div>
+              <p className="font-semibold text-white tracking-wide">
+                Jafuta Foundation (US)
+              </p>
+              <address className="not-italic text-white/85 mt-1">
+                525 Bingham Knoll,
+                <br />
+                Jacksonville, OR 97530
+              </address>
+              <p className="font-medium text-white mt-2">Registered 501(c)(3)</p>
+              <p className="font-medium text-white">EIN No. 81-3902811</p>
+            </div>
           </div>
 
-          <div>
-            <p className="font-semibold text-white tracking-wide">
-              Jafuta Foundation (US)
-            </p>
-            <address className="not-italic text-white/85 mt-1">
-              525 Bingham Knoll,
-              <br />
-              Jacksonville, OR 97530
-            </address>
-            <p className="font-medium text-white mt-2">Registered 501(c)(3)</p>
-            <p className="font-medium text-white">EIN No. 81-3902811</p>
-          </div>
-
-          <div>
+          <div className="flex flex-col sm:flex-row md:flex-col sm:items-center md:items-start justify-between gap-6 pt-2 border-t border-white/10 md:border-none md:pt-0">
             <p className="text-white/85">
               Email:{" "}
               <a
@@ -64,24 +66,22 @@ const Footer = () => {
               </a>
             </p>
 
-            <div className="mt-8 inline-block bg-white p-2.5 rounded-md shadow-xs">
+            <div className="inline-block bg-white p-2 sm:p-2.5 rounded-md shadow-xs w-fit">
               <img
                 src="/img/jafuta-candid-logo.webp"
                 alt="Candid Platinum Transparency Seal"
-                className="w-44 h-auto object-contain"
+                className="w-36 sm:w-44 h-auto object-contain"
               />
             </div>
           </div>
         </div>
 
-        
-        <div className="lg:col-span-6 lg:col-start-7 grid grid-cols-1 sm:grid-cols-2 gap-10">
-        
+        <div className="md:col-span-7 lg:col-span-6 lg:col-start-7 grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 pt-6 md:pt-0 border-t border-white/15 md:border-none">
           <div>
-            <h4 className="text-xl sm:text-2xl font-light tracking-wide mb-5">
+            <h4 className="text-lg sm:text-xl md:text-2xl font-light tracking-wide mb-4 sm:mb-5">
               About
             </h4>
-            <ul className="space-y-3 text-sm sm:text-[15px] font-light">
+            <ul className="space-y-2.5 sm:space-y-3 text-sm sm:text-[15px] font-light">
               {aboutLinks.map((link) => (
                 <li key={link.label}>
                   <a
@@ -94,8 +94,7 @@ const Footer = () => {
               ))}
             </ul>
 
-        
-            <div className="flex items-center gap-4 mt-8">
+            <div className="flex items-center gap-4 mt-6 sm:mt-8">
               <a
                 href="https://www.facebook.com/JafutaFoundation"
                 target="_blank"
@@ -130,12 +129,11 @@ const Footer = () => {
             </div>
           </div>
 
-        
           <div>
-            <h4 className="text-xl sm:text-2xl font-light tracking-wide mb-5">
+            <h4 className="text-lg sm:text-xl md:text-2xl font-light tracking-wide mb-4 sm:mb-5">
               Projects
             </h4>
-            <ul className="space-y-3 text-sm sm:text-[15px] font-light leading-snug">
+            <ul className="space-y-2.5 sm:space-y-3 text-sm sm:text-[15px] font-light leading-snug">
               {projectLinks.map((link) => (
                 <li key={link.label}>
                   <a
@@ -151,8 +149,7 @@ const Footer = () => {
         </div>
       </div>
 
-      
-      <div className="max-w-7xl mx-auto mt-14 pt-6 border-t border-white/15">
+      <div className="max-w-7xl mx-auto mt-10 sm:mt-14 pt-6 border-t border-white/15">
         <p className="text-center text-white/60 text-xs sm:text-[13px]">
           © {new Date().getFullYear()} Jafuta Foundation. All rights reserved.
         </p>

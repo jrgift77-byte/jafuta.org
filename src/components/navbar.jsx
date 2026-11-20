@@ -11,27 +11,27 @@ export default function Navbar({ currentPage, setPage }) {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#FDFBF7]/95 backdrop-blur-xs border-b border-stone-200 shadow-xs">
+    <header className="sticky top-0 z-50 w-full bg-[#FDFBF7]/95 backdrop-blur-xs border-b border-stone-200 shadow-xs">
       <nav
         aria-label="Primary Navigation"
-        className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between"
+        className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-4 flex items-center justify-between gap-4"
       >
         <button
           type="button"
           onClick={() => handleNavClick("Home")}
-          className="flex items-center gap-3 text-left cursor-pointer group"
+          className="flex items-center gap-2.5 sm:gap-3 text-left cursor-pointer group shrink-0"
         >
-          <div className="w-10 h-10 rounded-full border-2 border-[#4A5343] flex items-center justify-center bg-white group-hover:border-[#1E6B65] transition-colors">
-            <span className="text-[10px] font-serif font-bold text-[#4A5343] group-hover:text-[#1E6B65] transition-colors">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-[#4A5343] flex items-center justify-center bg-white group-hover:border-[#1E6B65] transition-colors">
+            <span className="text-[9px] sm:text-[10px] font-serif font-bold text-[#4A5343] group-hover:text-[#1E6B65] transition-colors">
               JAFUTA
             </span>
           </div>
-          <span className="hidden sm:block font-serif text-xs sm:text-sm font-bold text-[#4A5343] tracking-widest">
+          <span className="font-serif text-[11px] sm:text-xs lg:text-sm font-bold text-[#4A5343] tracking-wider sm:tracking-widest">
             JAFUTA FOUNDATION
           </span>
         </button>
 
-        <div className="hidden md:flex items-center gap-7 font-sans text-sm font-medium text-[#4A5343]">
+        <div className="hidden md:flex items-center gap-4 lg:gap-7 font-sans text-xs lg:text-sm font-medium text-[#4A5343]">
           {navItems.map((item) => {
             const isActive = currentPage === item;
 
@@ -40,7 +40,7 @@ export default function Navbar({ currentPage, setPage }) {
                 key={item}
                 type="button"
                 onClick={() => handleNavClick(item)}
-                className={`py-1 cursor-pointer transition-colors ${
+                className={`py-1 whitespace-nowrap cursor-pointer transition-colors ${
                   isActive
                     ? "text-[#1E6B65] font-semibold border-b-2 border-[#1E6B65]"
                     : "hover:text-[#1E6B65] border-b-2 border-transparent"
@@ -54,7 +54,7 @@ export default function Navbar({ currentPage, setPage }) {
           <button
             type="button"
             onClick={() => handleNavClick("Donate")}
-            className="bg-[#1E6B65] hover:bg-[#154d49] text-white px-5 py-2.5 rounded-sm shadow-xs transition-colors font-semibold text-xs uppercase tracking-wider cursor-pointer"
+            className="bg-[#1E6B65] hover:bg-[#154d49] text-white px-4 lg:px-5 py-2 lg:py-2.5 rounded-sm shadow-xs transition-colors font-semibold text-xs uppercase tracking-wider cursor-pointer whitespace-nowrap"
           >
             Donate
           </button>
@@ -65,7 +65,7 @@ export default function Navbar({ currentPage, setPage }) {
           onClick={() => setMenuOpen((prev) => !prev)}
           aria-expanded={menuOpen}
           aria-label="Toggle navigation menu"
-          className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-sm border border-stone-300 text-[#4A5343] hover:text-[#1E6B65] hover:border-[#1E6B65] transition-colors cursor-pointer"
+          className="md:hidden inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-sm border border-stone-300 text-[#4A5343] hover:text-[#1E6B65] hover:border-[#1E6B65] transition-colors cursor-pointer shrink-0"
         >
           {menuOpen ? (
             <svg
@@ -100,7 +100,7 @@ export default function Navbar({ currentPage, setPage }) {
       </nav>
 
       {menuOpen && (
-        <div className="md:hidden bg-[#FDFBF7] border-t border-stone-200 px-6 py-4 space-y-2 shadow-md">
+        <div className="md:hidden bg-[#FDFBF7] border-t border-stone-200 px-4 sm:px-6 py-4 space-y-1.5 shadow-md max-h-[calc(100vh-4rem)] overflow-y-auto">
           {navItems.map((item) => {
             const isActive = currentPage === item;
 
